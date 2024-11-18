@@ -129,7 +129,7 @@ const Sidebar = ({ onSelectUser }) => {
                         onChange={(e) => setSearchInput(e.target.value)}
                         type='text'
                         className='px-4 w-auto bg-transparent outline-none rounded-full'
-                        placeholder='search user'
+                        placeholder='Search for a user...'
                     />
                     <button className='btn btn-circle bg-sky-700 hover:bg-gray-950'>
                         <FaSearch />
@@ -184,8 +184,8 @@ const Sidebar = ({ onSelectUser }) => {
                             {chatUser.length === 0 ? (
                                 <>
                                     <div className='font-bold items-center flex flex-col text-xl text-yellow-500'>
-                                        <h1>Why are you Alone!!🤔</h1>
-                                        <h1>Search username to chat</h1>
+                                        <h1>Feeling lonely? 🤔</h1>
+                                        <h1>Start a chat by searching for a user!</h1>
                                     </div>
                                 </>
                             ) : (
@@ -203,7 +203,7 @@ const Sidebar = ({ onSelectUser }) => {
                                                 {/*Socket is Online*/}
                                                 <div className={`avatar ${isOnline[index] ? 'online':''}`}>
                                                     <div className="w-12 rounded-full">
-                                                        <img src={user.profilepic} alt='user.img' />
+                                                        <img src={user.profilepic} alt='User Avatar' />
                                                     </div>
                                                 </div>
                                                 <div className='flex flex-col flex-1'>
@@ -211,7 +211,7 @@ const Sidebar = ({ onSelectUser }) => {
                                                 </div>
                                                     <div>
                                                         { newMessageUsers.reciverId === authUser._id && newMessageUsers.senderId === user._id ?
-                                                    <div className="rounded-full bg-green-700 text-sm text-white px-[4px]">+1</div>:<></>
+                                                    <div className="rounded-full bg-green-700 text-sm text-white px-[4px]">New</div>:<></>
                                                         }
                                                     </div>
                                             </div>
@@ -227,7 +227,7 @@ const Sidebar = ({ onSelectUser }) => {
                         <button onClick={handelLogOut} className='hover:bg-red-600  w-10 cursor-pointer hover:text-white rounded-lg'>
                             <BiLogOut size={25} />
                         </button>
-                        <p className='text-sm py-1'>Logout</p>
+                        <p className='text-sm py-1'>Log Out</p>
                     </div>
                 </>
             )}

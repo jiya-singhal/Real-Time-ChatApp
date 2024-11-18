@@ -4,7 +4,7 @@ import User from '../Models/userModels.js'
 const isLogin = (req, res, next) => {
     try {
         const token = req.cookies.jwt
-        if (!token) return res.status(500).send({ success: false, message: "User Unauthorize" });
+        if (!token) return res.status(500).send({ success: false, message: "User is Unauthorized" });
         const decode = jwt.verify(token,process.env.JWT_SECRET);
         if(!decode)  return res.status(500).send({success:false, message:"User Unauthorize -Invalid Token"})
         const user = User.findById(decode.userId).select("-password");

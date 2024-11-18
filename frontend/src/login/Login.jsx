@@ -45,13 +45,13 @@ const Login = () => {
             <div className='w-full p-6 rounded-lg shadow-lg
           bg-gray-400 bg-clip-padding
            backderop-filter backdrop-blur-lg bg-opacity-0'>
-                <h1 className='text-3xl font-bold text-center text-gray-300'>Login
-                    <span className='text-gray-950'> Chatters </span>
+                <h1 className='text-3xl font-bold text-center text-gray-300'>Welcome Back to
+                    <span className='text-gray-950'> Chatters! </span>
                     </h1>
                     <form onSubmit={handelSubmit} className='flex flex-col text-black'>
                         <div>
                             <label className='label p-2' >
-                                <span className='font-bold text-gray-950 text-xl label-text'>Email :</span>
+                                <span className='font-bold text-gray-950 text-xl label-text'>Email Address :</span>
                             </label>
                             <input
                                 id='email'
@@ -63,7 +63,7 @@ const Login = () => {
                         </div>
                         <div>
                             <label className='label p-2' >
-                                <span className='font-bold text-gray-950 text-xl label-text'>Password :</span>
+                                <span className='font-bold text-gray-950 text-xl label-text'>Enter Password :</span>
                             </label>
                             <input
                                 id='password'
@@ -84,12 +84,12 @@ const Login = () => {
                     <div className='pt-2'>
                         <p className='text-sm font-semibold
                          text-gray-800'>
-                            Don't have an Acount ? <Link to={'/register'}>
+                             New here? <Link to={'/register'}>
                                 <span
                                     className='text-gray-950 
                             font-bold underline cursor-pointer
                              hover:text-green-950'>
-                                    Register Now!!
+                                    Create an account!
                                 </span>
                             </Link>
                         </p>

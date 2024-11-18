@@ -60,61 +60,61 @@ console.log(inputData);
                     <form onSubmit={handelSubmit} className='flex flex-col text-black'>
                     <div>
                             <label className='label p-2' >
-                                <span className='font-bold text-gray-950 text-xl label-text'>fullname :</span>
+                                <span className='font-bold text-gray-950 text-xl label-text'>Full Name :</span>
                             </label>
                             <input
                                 id='fullname'
                                 type='text'
                                 onChange={handelInput}
-                                placeholder='Enter Full Name'
+                                placeholder='Enter your Full Name'
                                 required
                                 className='w-full input input-bordered h-10' />
                         </div>
                         <div>
                             <label className='label p-2' >
-                                <span className='font-bold text-gray-950 text-xl label-text'>username :</span>
+                                <span className='font-bold text-gray-950 text-xl label-text'>Username :</span>
                             </label>
                             <input
                                 id='username'
                                 type='text'
                                 onChange={handelInput}
-                                placeholder='Enter UserName'
+                                placeholder='Choose a username'
                                 required
                                 className='w-full input input-bordered h-10' />
                         </div>
                         <div>
                             <label className='label p-2' >
-                                <span className='font-bold text-gray-950 text-xl label-text'>Email :</span>
+                                <span className='font-bold text-gray-950 text-xl label-text'>Email Address :</span>
                             </label>
                             <input
                                 id='email'
                                 type='email'
                                 onChange={handelInput}
-                                placeholder='Enter email'
+                                placeholder='Enter your email'
                                 required
                                 className='w-full input input-bordered h-10' />
                         </div>
                         <div>
                             <label className='label p-2' >
-                                <span className='font-bold text-gray-950 text-xl label-text'>Password :</span>
+                                <span className='font-bold text-gray-950 text-xl label-text'>Create Password :</span>
                             </label>
                             <input
                                 id='password'
                                 type='password'
                                 onChange={handelInput}
-                                placeholder='Enter password'
+                                placeholder='Choose a strong password'
                                 required
                                 className='w-full input input-bordered h-10' />
                         </div>
                         <div>
                             <label className='label p-2' >
-                                <span className='font-bold text-gray-950 text-xl label-text'>Conf.Password :</span>
+                                <span className='font-bold text-gray-950 text-xl label-text'>Confirm Password :</span>
                             </label>
                             <input
                                 id='confpassword'
                                 type='text'
                                 onChange={handelInput}
-                                placeholder='Enter Confirm password'
+                                placeholder='Re-enter your password'
                                 required
                                 className='w-full input input-bordered h-10' />
                         </div>
@@ -122,7 +122,7 @@ console.log(inputData);
                         <div
                          id='gender' className="flex gap-2">
                         <label className="cursor-pointer label flex gap-2">
-                        <span className="label-text font-semibold text-gray-950">male</span>
+                        <span className="label-text font-semibold text-gray-950">Male</span>
                         <input 
                         onChange={()=>selectGender('male')}
                         checked={inputData.gender === 'male'}
@@ -130,7 +130,7 @@ console.log(inputData);
                         className="checkbox checkbox-info"/>
                         </label>
                         <label className="cursor-pointer label flex gap-2">
-                        <span className="label-text font-semibold text-gray-950">female</span>
+                        <span className="label-text font-semibold text-gray-950">Female</span>
                         <input 
                         checked={inputData.gender === 'female'}
                         onChange={()=>selectGender('female')}
@@ -144,19 +144,19 @@ console.log(inputData);
                             w-auto px-2 py-1 bg-gray-950 
                             text-lg hover:bg-gray-900 
                             text-white rounded-lg hover: scale-105'>
-                           {loading ? "loading..":"Register"}
+                           {loading ? "Creating Account...":"Register"}
                             </button>
                     </form>
 
                     <div className='pt-2'>
                         <p className='text-sm font-semibold
                          text-gray-800'>
-                            Dont have an Acount ? <Link to={'/login'}>
+                          Already have an account? <Link to={'/login'}>
                                 <span
                                     className='text-gray-950 
                             font-bold underline cursor-pointer
                              hover:text-green-950'>
-                                    Login Now!!
+                                     Sign in here!
                                 </span>
                             </Link>
                         </p>

@@ -84,8 +84,8 @@ const MessageContainer = ({ onBackUser }) => {
           <div className='flex items-center justify-center w-full h-full'>
             <div className='px-4 text-center text-2xl text-gray-950 font-semibold 
             flex flex-col items-center gap-2'>
-              <p className='text-2xl'>Welcome!!👋 {authUser.username}😉</p>
-              <p className="text-lg">Select a chat to start messaging</p>
+              <p className='text-2xl'>Welcome, {authUser.username}! 👋</p>
+              <p className="text-lg">Select a conversation to start chatting.</p>
               <TiMessages className='text-6xl text-center' />
             </div>
           </div>
@@ -118,8 +118,7 @@ const MessageContainer = ({ onBackUser }) => {
                 </div>
               )}
               {!loading && messages?.length === 0 && (
-                <p className='text-center text-white items-center'>Send a message to 
-                start Conversation</p>
+                <p className='text-center text-white items-center'>Be the first to send a message and start the conversation!</p>
               )}
               {!loading && messages?.length > 0 && messages?.map((message) => (
                 <div className='text-white' key={message?._id} ref={lastMessageRef}>
